@@ -13,11 +13,43 @@
       text-align: center;
     }
 
+    /* Banner / Hero Section */
+    .banner {
+      background: url("banner.jpg") no-repeat center center;
+      /* you’ll need to have banner.jpg in same folder */
+      background-size: cover;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+    }
+    .banner::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    .banner h1 {
+      position: relative;
+      font-size: 2.8rem;
+      margin: 0;
+      padding: 0 20px;
+    }
+    .banner p {
+      position: relative;
+      font-size: 1.2rem;
+      margin: 8px 0 0 0;
+      padding: 0 20px;
+    }
+
     header {
       background: linear-gradient(135deg, #4a90e2, #357ABD);
       color: white;
       padding: 40px 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 
     h1 {
@@ -59,6 +91,14 @@
   </style>
 </head>
 <body>
+
+  <!-- New banner / hero section -->
+  <div class="banner">
+    <div>
+      <h1>Welcome to My Site 💖</h1>
+      <p>Your little corner on the web</p>
+    </div>
+  </div>
 
   <header>
     <h1>Welcome to My Website</h1>
