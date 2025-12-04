@@ -11,14 +11,14 @@
       background: #f4f6f8;
       color: #333;
       text-align: center;
+      line-height: 1.6;
     }
 
-    /* Banner / Hero Section */
     .banner {
       background: url("banner.jpg") no-repeat center center;
-      /* you’ll need to have banner.jpg in same folder */
       background-size: cover;
-      height: 250px;
+      height: 70vh;
+      min-height: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -31,85 +31,111 @@
       top: 0; left: 0;
       width: 100%; height: 100%;
       background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+    .banner-content {
+      position: relative;
+      z-index: 1;
+      padding: 0 20px;
+      max-width: 800px;
     }
     .banner h1 {
-      position: relative;
-      font-size: 2.8rem;
       margin: 0;
-      padding: 0 20px;
+      font-size: 3rem;
+      letter-spacing: 1px;
     }
     .banner p {
-      position: relative;
-      font-size: 1.2rem;
-      margin: 8px 0 0 0;
-      padding: 0 20px;
+      margin: 15px 0 0;
+      font-size: 1.3rem;
+    }
+    .banner .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 28px;
+      background: #ff5e7d;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 4px;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .banner .btn:hover {
+      background: #ff435f;
+      transform: translateY(-3px);
     }
 
     header {
-      background: linear-gradient(135deg, #4a90e2, #357ABD);
-      color: white;
-      padding: 40px 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2.4rem;
-      letter-spacing: 1px;
-    }
-
-    p {
-      margin-top: 10px;
-      font-size: 1.1rem;
+      background: #fff;
+      padding: 25px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     nav {
-      margin: 25px 0;
-      font-size: 1.1rem;
+      margin: 15px 0;
     }
 
     nav a {
       color: #357ABD;
       text-decoration: none;
       font-weight: bold;
-      margin: 0 10px;
-      transition: 0.3s;
+      margin: 0 12px;
+      transition: color 0.3s;
     }
-
     nav a:hover {
       color: #235a8a;
       text-decoration: underline;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
     footer {
       background: #222;
       color: #ddd;
       padding: 15px 0;
-      margin-top: 40px;
+      margin-top: 50px;
       font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .banner h1 {
+        font-size: 2.2rem;
+      }
+      .banner p {
+        font-size: 1rem;
+      }
+      .banner .btn {
+        padding: 10px 22px;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- New banner / hero section -->
   <div class="banner">
-    <div>
+    <div class="banner-content">
       <h1>Welcome to My Site 💖</h1>
-      <p>Your little corner on the web</p>
+      <p>Your little corner on the web — where magic begins.</p>
+      <a href="#" class="btn">Explore More</a>
     </div>
   </div>
 
   <header>
-    <h1>Welcome to My Website</h1>
-    <p>Hello there — this is my simple home page</p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
+  <main>
+    <h2>About This Site</h2>
+    <p>This is a simple home page created with love — pretty, clean and easy to read. I built it with HTML & CSS to give visitors a warm welcome and a nice first impression.</p>
+  </main>
 
   <footer>
     <p>&copy; 2025 Me. All rights reserved.</p>
