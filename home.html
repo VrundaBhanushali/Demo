@@ -4,19 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Simple Home Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4a90e2, #357ABD);
+      color: white;
+      padding: 40px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      letter-spacing: 1px;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    nav {
+      margin: 25px 0;
+      font-size: 1.1rem;
+    }
+
+    nav a {
+      color: #357ABD;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #235a8a;
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #222;
+      color: #ddd;
+      padding: 15px 0;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My Website</h1>
-  <p>Hello there — this is my simple home page</p>
+
+  <header>
+    <h1>Welcome to My Website</h1>
+    <p>Hello there — this is my simple home page</p>
+  </header>
 
   <nav>
-    <a href="#">Home</a> |
-    <a href="#">About</a> |
+    <a href="#">Home</a>
+    <a href="#">About</a>
     <a href="#">Contact</a>
   </nav>
 
   <footer>
     <p>&copy; 2025 Me. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
